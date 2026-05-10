@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>شركة الرعد للتقنية ⚡</title>
+    <style>
+        body {
+            margin: 0;
+            background: #050505;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #bg-space {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+        }
+
+        .container { position: relative; z-index: 10; padding: 20px; max-width: 1200px; margin: auto; }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border-bottom: 3px solid #ff9f43;
+            border-radius: 0 0 50px 50px;
+        }
+
+        header h1 { font-size: 3.5em; color: #ff9f43; margin: 0; text-shadow: 0 0 20px rgba(255,159,67,0.4); }
+
+        .section-header {
+            font-size: 2em;
+            margin: 50px 0 20px;
+            padding-right: 15px;
+            border-right: 6px solid #ff9f43;
+            color: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* تصميم البطاقة الاحترافي */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.4s;
+            position: relative;
+        }
+    
+
+        .card:hover {
+            transform: translateY(-15px);
+            border-color: #ff9f43;
+            box-shadow: 0 15px 40px rgba(255, 159, 67, 0.2);
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px; right: 15px;
+            padding: 5px 12px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .new { background: #27ae60; color: white; }
+        .used { background: #f1c40f; color: black; }
+
+        .price { font-size: 1.6em; color: #ff9f43; font-weight: bold; margin: 15px 0; }
+        
+        .buy-btn {
+            background: #ff9f43;
+            color: black;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .buy-btn:hover { background: #fff; transform: scale(1.05); }
+
+        /* قسم التواصل */
+        .footer-contact {
+            background: rgba(255, 159, 67, 0.1);
+            padding: 40px;
+            border-radius: 30px;
+            margin-top: 80px;
+            text-align: center;
+            border: 1px solid rgba(255,159,67,0.3);
+        }
+
+        .social-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background: #ff9f43;
+            color: black;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bg-space"></div>
+
+    <div class="container">
+        <header>
+            <h1>شـركـة الـرعـد لـلـتـقـنـيـة ⚡</h1>
+            <p>الجودة، الضمان، والتميز في عالم الأجهزة</p>
+        </header>
+
+        <h2 class="section-header">آيفونات مستخدمة (نظافة ملكية) 📱</h2>
+        <div class="grid">
+            <div class="card"><span class="badge used">مستعمل</span><h3>iPhone 13 Pro Max</h3><p>256GB - بطارية 90%</p><div class="price">780,000 د.ع</div><button class="buy-btn" onclick="buy('iPhone 13 Pro Max')">شراء الآن 🛒</button></div>
+         <div class="card"><span class="badge used">مستعمل</span><h3>iPhone 14 Pro</h3><p>128GB - نظافة 100%</p><div class="price">950,000 د.ع</div><button class="buy-btn" onclick="buy('iPhone 14 Pro')">شراء الآن 🛒</button></div>
+            <div class="card"><span class="badge used">مستعمل</span><h3>iPhone 15 Pro Max</h3><p>512GB - تيتانيوم طبيعي</p><div class="price">1,350,000 د.ع</div><button class="buy-btn" onclick="buy('iPhone 15 Pro Max')">شراء الآن 🛒</button></div>
+        </div>
+
+        <h2 class="section-header">الإصدارات الجديدة (iPhone 17) ✨</h2>
+        <div class="grid">
+            <div class="card"><span class="badge new">جديد</span><h3>iPhone 17 Pro Max</h3><p>أسود - تيتانيوم - 1TB</p><div class="price">2,100,000 د.ع</div><button class="buy-btn" onclick="buy('iPhone 17 Pro Max - أسود')">طلب مسبق ✅</button></div>
+            <div class="card"><span class="badge new">جديد</span><h3>iPhone 17 Pro Max</h3><p>ذهبي ملكي - 512GB</p><div class="price">1,950,000 د.ع</div><button class="buy-btn" onclick="buy('iPhone 17 Pro Max - ذهبي')">طلب مسبق ✅</button></div>
+            <div class="card"><span class="badge new">جديد</span><h3>iPhone 17 Pro Max</h3><p>أبيض لؤلؤي - 256GB</p><div class="price">1,800,000 د.ع</div><button class="buy-btn" onclick="buy('iPhone 17 Pro Max - أبيض')">طلب مسبق ✅</button></div>
+            <div class="card"><span class="badge new">جديد</span><h3>iPhone 17 Pro Max</h3><p>أزرق ليلي - 512GB</p><div class="price">1,950,000 د.ع</div><button class="buy-btn" onclick="buy('iPhone 17 Pro Max - أزرق')">طلب مسبق ✅</button></div>
+        </div>
+
+        <h2 class="section-header">لابتوبات HP الاحترافية 💻</h2>
+        <div class="grid">
+            <div class="card"><h3>HP Victus 16</h3><p>Core i7 - RTX 4060 - 16GB</p><div class="price">1,150,000 د.ع</div><button class="buy-btn" onclick="buy('HP Victus')">شراء 🛒</button></div>
+            <div class="card"><h3>HP Pavilion Gaming</h3><p>Ryzen 7 - 512GB SSD</p><div class="price">890,000 د.ع</div><button class="buy-btn" onclick="buy('HP Pavilion')">شراء 🛒</button></div>
+        </div>
+
+        <h2 class="section-header">تجميعات PC Gaming 🖥️</h2>
+        <div class="grid">
+            <div class="card"><h3>الرعد Ultimate PC</h3><p>RTX 4090 - i9 14th Gen</p><div class="price">3,500,000 د.ع</div><button class="buy-btn" onclick="buy('Ultimate PC')">حجز التجميعة ⚡</button></div>
+            <div class="card"><h3>الرعد Budget PC</h3><p>RTX 3060 - i5 12th Gen</p><div class="price :">1,100,000 د.ع</div><button class="buy-btn" onclick="buy('Budget PC')">حجز التجميعة ⚡</button></div>
+        </div>
+
+        <h2 class="section-header">السماعات والإكسسوارات 🎧</h2>
+        <div class="grid">
+            <div class="card"><h3>سماعة محيطية Pro</h3><p>7.1 Surround - RGB</p><div class="price">85,000 د.ع</div><button class="buy-btn" onclick="buy('سماعة محيطية')">شراء 🛒</button></div>
+            <div class="card"><h3>سماعة رقبة الرياضية</h3><p>عزل ضوضاء - بطارية 20 ساعة</p><div class="price">45,000 د.ع</div><button class="buy-btn" onclick="buy('سماعة رقبة')">شراء 🛒</button></div>
+        </div>
+
+        <div class="footer-contact">
+            <h2>للطلب والاستفسار المباشر 💌</h2>
+            <p>تواصل مع فريق مبيعات شركة الرعد عبر:</p>
+            <a href="#" class="social-link">Instagram 📸</a>
+            <a href="mailto:alraad.tech@gmail.com" class="social-link">Email ✉️</a>
+        </div>
+    </div>
+
+    <script>
+        function buy(product) {
+            alert("تم إضافة " + product + " إلى سلة الشراء بنجاح! سيتم توجيهك للمبيعات.");
+        }
+    </script>
+</body>
+</html>   
